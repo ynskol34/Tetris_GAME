@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://d1fp5v3e30d2a"]
+
+[ext_resource type="Script" uid="uid://br5217etucrcl" path="res://src/modules/tetromino/tetromino.gd" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://grh5ijod10ix" path="res://src/core/main.gd" id="1_h2yge"]
+[ext_resource type="Texture2D" uid="uid://mjn6i3gb12ng" path="res://icon.svg" id="1_ig7tw"]
+
+[node name="Main" type="Node2D" unique_id=1100114651]
+script = ExtResource("1_h2yge")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1317398057]
+position = Vector2(-243, 122.000015)
+scale = Vector2(1.5312499, 1.769531)
+texture = ExtResource("1_ig7tw")
+script = ExtResource("1_0xm2m")
+
+[node name="Icon2" type="Sprite2D" parent="." unique_id=234669680]
+position = Vector2(-104, 97)
+texture = ExtResource("1_ig7tw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Icon2" unique_id=627832340]

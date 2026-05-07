@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://d1fp5v3e30d2a"]
+
+[ext_resource type="Script" uid="uid://br5217etucrcl" path="res://src/modules/tetromino/tetromino.gd" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://grh5ijod10ix" path="res://src/core/main.gd" id="1_h2yge"]
+[ext_resource type="Script" uid="uid://bsjjoi64c1x05" path="res://src/core/grid.gd" id="4_1bvp3"]
+[ext_resource type="Script" uid="uid://4l6k586a3xbx" path="res://src/modules/tetromino/ishape.gd" id="5_272bh"]
+[ext_resource type="Script" uid="uid://cu1fs2400e0b6" path="res://src/modules/tetromino/tshape.gd" id="6_5vw27"]
+[ext_resource type="Script" uid="uid://tgis1htlscqs" path="res://src/services/game_manager.gd" id="7_272bh"]
+[ext_resource type="Script" uid="uid://btkwytnam1grs" path="res://src/modules/tetromino/lshape.gd" id="7_kek77"]
+[ext_resource type="Script" uid="uid://cwblxfwgrhwty" path="res://label.gd" id="8_4c57u"]
+[ext_resource type="Script" uid="uid://cbg286p7jk323" path="res://panel.gd" id="9_efxa6"]
+[ext_resource type="Script" uid="uid://c7hyoprkppf0a" path="res://button.gd" id="10_dg77c"]
+
+[node name="Main" type="Node2D" unique_id=1100114651]
+script = ExtResource("1_h2yge")
+
+[node name="Grid" type="Node2D" parent="." unique_id=156287995]
+script = ExtResource("4_1bvp3")
+
+[node name="tetromino" type="Node2D" parent="Grid" unique_id=568280045]
+script = ExtResource("1_0xm2m")
+
+[node name="ishape" type="Node2D" parent="Grid/tetromino" unique_id=669949556]
+script = ExtResource("5_272bh")
+
+[node name="lshape" type="Node2D" parent="Grid/tetromino" unique_id=47816111]
+script = ExtResource("7_kek77")
+
+[node name="tshape" type="Node2D" parent="Grid/tetromino" unique_id=1288442562]
+script = ExtResource("6_5vw27")
+
+[node name="game_manager" type="Node2D" parent="." unique_id=219386306]
+script = ExtResource("7_272bh")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=14705874]
+
+[node name="Label" type="Label" parent="UI" unique_id=1474902540]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -48.0
+offset_bottom = 23.0
+grow_horizontal = 0
+text = "Skor 0"
+script = ExtResource("8_4c57u")
+
+[node name="Panel" type="Panel" parent="UI" unique_id=2046769065]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("9_efxa6")
+
+[node name="Button" type="Button" parent="UI/Panel" unique_id=1018507902]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "YENİDEN BAŞLA"
+script = ExtResource("10_dg77c")
+
+[node name="Label" type="Label" parent="UI/Panel" unique_id=960505192]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "OYUN BİTTİ"
