@@ -2,7 +2,7 @@ extends Node2D
 class_name Tetromino
 
 var shape = []
-var grid_position = Vector2i(6, 0)
+var grid_position = Vector2i(8, 0) # öncesinde (6,0) 6. sütunda başlıyordu ve sol kısımdaydı. Onun yerine 8 getirilerek bloklar ortada spawn olmaya başladı.
 var block_size = 50
 var fall_speed = 0.5
 var fall_timer = 0.0
