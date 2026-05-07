@@ -4,7 +4,7 @@ class_name Tetromino
 var shape = []
 var grid_position = Vector2i(8, 0) # öncesinde (6,0) 6. sütunda başlıyordu ve sol kısımdaydı. Onun yerine 8 getirilerek bloklar ortada spawn olmaya başladı.
 var block_size = 50
-var fall_speed = 0.5
+var fall_speed = 0.8 # 0.5 olan düşme hızı, 0.8 yapılarak düşme hızı yavaşlatıldı.
 var fall_timer = 0.0
 var grid = null 
 var block_color = Color.WHITE
