@@ -2,9 +2,9 @@ extends Node2D
 class_name Tetromino
 
 var shape = []
-var grid_position = Vector2i(6, 0)
+var grid_position = Vector2i(18, 0) # öncesinde (6,0) ve sonrasında (8,0) olan x(satır) sayısı grid.gd'de 36 yapılarak grid position 18 e dönüştürüldü ve sonrasında bloklar ortada spawn olmaya başladı.
 var block_size = 50
-var fall_speed = 0.5
+var fall_speed = 0.8 # 0.5 olan düşme hızı, 0.8 yapılarak düşme hızı yavaşlatıldı.
 var fall_timer = 0.0
 var grid = null 
 var block_color = Color.WHITE

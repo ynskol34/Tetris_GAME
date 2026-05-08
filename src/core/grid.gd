@@ -1,6 +1,6 @@
 extends Node2D
 
-var width = 35
+var width = 36
 var height = 21
 var grid_data = [] 
 var block_size = 50
