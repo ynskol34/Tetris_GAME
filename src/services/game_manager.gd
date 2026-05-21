@@ -43,3 +43,21 @@ func reset_game():
 
 func _on_button_pressed() -> void:
 	pass # Replace with function body.
+
+
+#Zamanlayıcı için Değişkenler
+@onready var game_timer = $"/root/Main/GameTimer" # Sahnenin olduğu yapı yolunu kopyalıyoruz. Sahne kod ile birleşsin.
+@onready var timer_label = $"/root/Main/UI/TimerLabel # Yine aynı şekilde kopyalıyoruz.
+
+var total_time : int= 0 # Geçen toplam saniye 0 olarak ayarlanıyor.
+
+func _on_game_timer_timeout() -> void:
+    total_time +=1
+    update_timer_label()
+
+# Zamanı dakika saniye formatına çeviren fonksiyon
+func update_timer_label() -> void:
+    var minutes = total_time / 60
+    var seconds = total_time % 60 
+# Örnek: 02:05 şeklinde gözükmesi için string formatı kullanıyoruz.
+timer_label.text = "Süre: %02d:%02d" % [minutes, seconds]
